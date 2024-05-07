@@ -7,8 +7,9 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        //Agregando logo
         this.setTitle("LifeMates | Dashboard");
-
+        //Importación de icono
         String imagePath = "C:\\Users\\Andrew\\OneDrive\\Documentos\\NetBeansProjects\\LifeMates_Dashboard\\src\\icon.png";
         Image IconImage = new ImageIcon(imagePath).getImage();
         this.setIconImage(IconImage);
