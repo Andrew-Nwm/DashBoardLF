@@ -33,9 +33,6 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="LifeMates | DashBoard"/>
-    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1080, 720]"/>
-    </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1080, 720]"/>
     </Property>
@@ -343,10 +340,10 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtCorreo" max="32767" attributes="0"/>
+                      <Component id="txtDocumento" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="correo" min="-2" max="-2" attributes="0"/>
+                              <Component id="documento" min="-2" max="-2" attributes="0"/>
                               <Component id="contrasenia" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="164" max="32767" attributes="0"/>
@@ -358,9 +355,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="correo" min="-2" max="-2" attributes="0"/>
+                          <Component id="documento" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtCorreo" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDocumento" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="contrasenia" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -371,7 +368,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="correo">
+                <Component class="javax.swing.JLabel" name="documento">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Chonburi" size="20" style="0"/>
@@ -379,10 +376,10 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4a" green="ca" red="c" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Correo electr&#xf3;nico"/>
+                    <Property name="text" type="java.lang.String" value="Documento de identidad"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCorreo">
+                <Component class="javax.swing.JTextField" name="txtDocumento">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Chonburi" size="18" style="0"/>

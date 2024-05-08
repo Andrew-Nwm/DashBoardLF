@@ -25,8 +25,8 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         FormPanel = new javax.swing.JPanel();
-        correo = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
+        documento = new javax.swing.JLabel();
+        txtDocumento = new javax.swing.JTextField();
         contrasenia = new javax.swing.JLabel();
         txtContrasenia = new javax.swing.JPasswordField();
         btnLogIn = new javax.swing.JButton();
@@ -53,7 +53,6 @@ public class WelcomePage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LifeMates | DashBoard");
-        setMaximumSize(new java.awt.Dimension(1080, 720));
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setResizable(false);
 
@@ -108,13 +107,13 @@ public class WelcomePage extends javax.swing.JFrame {
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
         FormPanel.setForeground(new java.awt.Color(255, 255, 255));
 
-        correo.setFont(new java.awt.Font("Chonburi", 0, 20)); // NOI18N
-        correo.setForeground(new java.awt.Color(12, 202, 74));
-        correo.setText("Correo electrónico");
+        documento.setFont(new java.awt.Font("Chonburi", 0, 20)); // NOI18N
+        documento.setForeground(new java.awt.Color(12, 202, 74));
+        documento.setText("Documento de identidad");
 
-        txtCorreo.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtCorreo.setForeground(new java.awt.Color(6, 100, 37));
-        txtCorreo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(12, 202, 74)));
+        txtDocumento.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
+        txtDocumento.setForeground(new java.awt.Color(6, 100, 37));
+        txtDocumento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(12, 202, 74)));
 
         contrasenia.setFont(new java.awt.Font("Chonburi", 0, 20)); // NOI18N
         contrasenia.setForeground(new java.awt.Color(12, 202, 74));
@@ -128,10 +127,10 @@ public class WelcomePage extends javax.swing.JFrame {
         FormPanel.setLayout(FormPanelLayout);
         FormPanelLayout.setHorizontalGroup(
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtCorreo)
+            .addComponent(txtDocumento)
             .addGroup(FormPanelLayout.createSequentialGroup()
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(correo)
+                    .addComponent(documento)
                     .addComponent(contrasenia))
                 .addGap(0, 164, Short.MAX_VALUE))
             .addComponent(txtContrasenia)
@@ -140,9 +139,9 @@ public class WelcomePage extends javax.swing.JFrame {
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FormPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(correo)
+                .addComponent(documento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contrasenia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -366,7 +365,7 @@ public class WelcomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
-        txtCorreo.setText("");
+        txtDocumento.setText("");
         txtContrasenia.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
 
@@ -413,8 +412,8 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnLogIn;
     private javax.swing.JLabel contrasenia;
-    private javax.swing.JLabel correo;
     private javax.swing.JLabel croptedIcon;
+    private javax.swing.JLabel documento;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -432,6 +431,6 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField txtContrasenia;
-    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtDocumento;
     // End of variables declaration//GEN-END:variables
 }

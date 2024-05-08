@@ -1,4 +1,15 @@
 com\mycompany\lifemates_dashboard\igu\WelcomePage$2.class
+com\mycompany\lifemates_dashboard\logica\Password_.class
+com\mycompany\lifemates_dashboard\persistencia\PasswordJpaController.class
+com\mycompany\lifemates_dashboard\logica\Controladora.class
+com\mycompany\lifemates_dashboard\logica\Users_.class
+com\mycompany\lifemates_dashboard\persistencia\exceptions\IllegalOrphanException.class
 com\mycompany\lifemates_dashboard\igu\WelcomePage$1.class
+com\mycompany\lifemates_dashboard\logica\Password.class
 com\mycompany\lifemates_dashboard\LifeMatesDashboard.class
+com\mycompany\lifemates_dashboard\logica\Users.class
+com\mycompany\lifemates_dashboard\persistencia\ControladoraPersistencia.class
+com\mycompany\lifemates_dashboard\persistencia\exceptions\NonexistentEntityException.class
+com\mycompany\lifemates_dashboard\persistencia\UsersJpaController.class
 com\mycompany\lifemates_dashboard\igu\WelcomePage.class
+com\mycompany\lifemates_dashboard\persistencia\exceptions\PreexistingEntityException.class
