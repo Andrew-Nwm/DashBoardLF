@@ -11,5 +11,6 @@ com\mycompany\lifemates_dashboard\logica\Controladora.class
 com\mycompany\lifemates_dashboard\logica\Users_.class
 com\mycompany\lifemates_dashboard\igu\WelcomePage$1.class
 com\mycompany\lifemates_dashboard\LifeMatesDashboard.class
+com\mycompany\lifemates_dashboard\igu\HomePage.class
 com\mycompany\lifemates_dashboard\persistencia\ControladoraPersistencia.class
 com\mycompany\lifemates_dashboard\persistencia\exceptions\PreexistingEntityException.class
