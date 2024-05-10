@@ -43,7 +43,6 @@ public class HomePage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1080, 720));
         setMinimumSize(new java.awt.Dimension(1080, 720));
-        setPreferredSize(new java.awt.Dimension(1080, 720));
         setResizable(false);
         setSize(new java.awt.Dimension(1080, 720));
 
@@ -145,6 +144,11 @@ public class HomePage extends javax.swing.JFrame {
         btnHome8.setText("Cerrar Sesión");
         btnHome8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHome8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHome8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHome8ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/cerrar-sesion.png"))); // NOI18N
@@ -272,7 +276,7 @@ public class HomePage extends javax.swing.JFrame {
         InfoAdminPanel.setLayout(InfoAdminPanelLayout);
         InfoAdminPanelLayout.setHorizontalGroup(
             InfoAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 518, Short.MAX_VALUE)
+            .addGap(0, 466, Short.MAX_VALUE)
         );
         InfoAdminPanelLayout.setVerticalGroup(
             InfoAdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +305,7 @@ public class HomePage extends javax.swing.JFrame {
         CaracteristicasPanel.setLayout(CaracteristicasPanelLayout);
         CaracteristicasPanelLayout.setHorizontalGroup(
             CaracteristicasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGap(0, 266, Short.MAX_VALUE)
         );
         CaracteristicasPanelLayout.setVerticalGroup(
             CaracteristicasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -328,14 +332,13 @@ public class HomePage extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(InfoAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ultimosCambiosPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InfoAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ultimosCambiosPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CaracteristicasPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -390,58 +393,29 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnProductosActionPerformed
 
+    private void btnHome8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHome8ActionPerformed
+        WelcomePage welcome = new WelcomePage();
+        welcome.setVisible(true);
+        welcome.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnHome8ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CaracteristicasPanel;
     private javax.swing.JPanel InfoAdminPanel;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel NavBarPanel;
-    private javax.swing.JPanel NavBarPanel1;
-    private javax.swing.JPanel NavBarPanel2;
     private javax.swing.JButton btnClientes;
-    private javax.swing.JButton btnClientes1;
-    private javax.swing.JButton btnClientes2;
     private javax.swing.JButton btnDashBoard;
     private javax.swing.JButton btnEmpleados;
-    private javax.swing.JButton btnEmpleados1;
-    private javax.swing.JButton btnEmpleados2;
-    private javax.swing.JButton btnHome1;
-    private javax.swing.JButton btnHome10;
-    private javax.swing.JButton btnHome11;
-    private javax.swing.JButton btnHome12;
-    private javax.swing.JButton btnHome13;
-    private javax.swing.JButton btnHome2;
     private javax.swing.JButton btnHome5;
-    private javax.swing.JButton btnHome6;
     private javax.swing.JButton btnHome7;
     private javax.swing.JButton btnHome8;
-    private javax.swing.JButton btnHome9;
     private javax.swing.JButton btnNotificaciones;
-    private javax.swing.JButton btnNotificaciones1;
-    private javax.swing.JButton btnNotificaciones2;
     private javax.swing.JButton btnProductos;
-    private javax.swing.JButton btnProductos1;
-    private javax.swing.JButton btnProductos2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -450,15 +424,10 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel ultimosCambiosPanel;
     // End of variables declaration//GEN-END:variables
