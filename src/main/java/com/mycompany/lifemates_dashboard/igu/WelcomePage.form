@@ -339,8 +339,8 @@
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="txtContrasenia" alignment="0" max="32767" attributes="0"/>
                               <Component id="documento" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="contrasenia" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="txtDocumento" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                              <Component id="contrasenia" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
