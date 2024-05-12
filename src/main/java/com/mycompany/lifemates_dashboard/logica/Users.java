@@ -35,7 +35,6 @@ public class Users implements Serializable {
         this.us_fecha_creacion = us_fecha_creacion;
     }
 
-    // Getters and setters for all fields
     public String getUs_id_usuario() {
         return us_id_usuario;
     }

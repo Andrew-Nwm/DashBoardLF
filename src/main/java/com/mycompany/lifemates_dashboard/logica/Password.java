@@ -4,18 +4,21 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Password implements Serializable {
 
     @Id
     private String co_id_contrasenia;
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @OneToOne(mappedBy = "password", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "us_id_usuario", referencedColumnName = "us_id_usuario")
     private Users user;
-    private String co_contrasenia; // Store the hashed password
+
+    private String co_contrasenia; 
     private String co_fecha_creacion;
     private String co_historial_contrasenias;
 
