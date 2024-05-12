@@ -1,17 +1,15 @@
 package com.mycompany.lifemates_dashboard.igu;
 
 import com.mycompany.lifemates_dashboard.logica.Controladora;
-import com.mycompany.lifemates_dashboard.persistencia.exceptions.PreexistingEntityException;
-import javax.swing.JOptionPane;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class UploadDataPage extends javax.swing.JFrame {
 
-    private Controladora controladora;
+    Controladora control = new Controladora();
 
     public UploadDataPage() {
         initComponents();
-        controladora = new Controladora();
     }
 
     @SuppressWarnings("unchecked")
@@ -51,27 +49,28 @@ public class UploadDataPage extends javax.swing.JFrame {
         FormPanel = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtIdUsuario = new javax.swing.JTextField();
+        txtNomMascota = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtNombreUsuario = new javax.swing.JTextField();
-        txtFechaCreacion = new javax.swing.JTextField();
+        txtColor = new javax.swing.JTextField();
+        txtTelDuenio = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txtIdPersona = new javax.swing.JTextField();
+        txtRaza = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        txtFechaCreacionUsuario = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        txtContrasenia = new javax.swing.JTextField();
-        txtIdContrasenia = new javax.swing.JTextField();
-        txtDocumento = new javax.swing.JTextField();
-        txtHistorialContrasenias = new javax.swing.JTextField();
+        txtNomDuenio = new javax.swing.JTextField();
+        txtDirDuenio = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtObservaciones = new javax.swing.JTextArea();
+        cmbAtEsp = new javax.swing.JComboBox<>();
+        cmbAlergico = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LifeMates | Ingresar Datos");
@@ -345,7 +344,6 @@ public class UploadDataPage extends javax.swing.JFrame {
         tituloDelPanel.setText("Ingreso de Datos");
 
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
-        FormPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         FormPanel.setMaximumSize(new java.awt.Dimension(745, 593));
         FormPanel.setMinimumSize(new java.awt.Dimension(745, 593));
 
@@ -356,34 +354,34 @@ public class UploadDataPage extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Id de usuario");
+        jLabel8.setText("Nombre de la mascota");
 
-        txtIdUsuario.setBackground(new java.awt.Color(224, 224, 224));
-        txtIdUsuario.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtIdUsuario.setForeground(new java.awt.Color(6, 100, 37));
-        txtIdUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtNomMascota.setBackground(new java.awt.Color(224, 224, 224));
+        txtNomMascota.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtNomMascota.setForeground(new java.awt.Color(6, 100, 37));
+        txtNomMascota.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         jLabel11.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Fecha de creación de contraseña");
+        jLabel11.setText("Teléfono del dueño");
 
         jLabel12.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("Nombre de usuario");
+        jLabel12.setText("Color");
 
-        txtNombreUsuario.setBackground(new java.awt.Color(224, 224, 224));
-        txtNombreUsuario.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtNombreUsuario.setForeground(new java.awt.Color(6, 100, 37));
-        txtNombreUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtColor.setBackground(new java.awt.Color(224, 224, 224));
+        txtColor.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtColor.setForeground(new java.awt.Color(6, 100, 37));
+        txtColor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
-        txtFechaCreacion.setBackground(new java.awt.Color(224, 224, 224));
-        txtFechaCreacion.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtFechaCreacion.setForeground(new java.awt.Color(6, 100, 37));
-        txtFechaCreacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtTelDuenio.setBackground(new java.awt.Color(224, 224, 224));
+        txtTelDuenio.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtTelDuenio.setForeground(new java.awt.Color(6, 100, 37));
+        txtTelDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         jLabel13.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Historial contraseña");
+        jLabel13.setText("Dirección del dueño");
 
         jLabel19.setFont(new java.awt.Font("Chonburi", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
@@ -393,25 +391,20 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Chonburi", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("de un nuevo empleado");
+        jLabel20.setText("de un nuevo cliente");
 
         jLabel14.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("ID persona");
+        jLabel14.setText("Raza");
 
-        txtIdPersona.setBackground(new java.awt.Color(224, 224, 224));
-        txtIdPersona.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtIdPersona.setForeground(new java.awt.Color(6, 100, 37));
-        txtIdPersona.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtRaza.setBackground(new java.awt.Color(224, 224, 224));
+        txtRaza.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtRaza.setForeground(new java.awt.Color(6, 100, 37));
+        txtRaza.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         jLabel16.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Fecha de creación de usuario");
-
-        txtFechaCreacionUsuario.setBackground(new java.awt.Color(224, 224, 224));
-        txtFechaCreacionUsuario.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtFechaCreacionUsuario.setForeground(new java.awt.Color(6, 100, 37));
-        txtFechaCreacionUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        jLabel16.setText("Observaciones");
 
         btnGuardar.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(12, 202, 74));
@@ -435,82 +428,107 @@ public class UploadDataPage extends javax.swing.JFrame {
 
         jLabel21.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("Documento de usuario");
+        jLabel21.setText("Alérgico");
 
         jLabel22.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("ID contraseña");
+        jLabel22.setText("Atención especial");
 
         jLabel23.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("Contraseña");
+        jLabel23.setText("Nombre dueño");
 
-        txtContrasenia.setBackground(new java.awt.Color(224, 224, 224));
-        txtContrasenia.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtContrasenia.setForeground(new java.awt.Color(6, 100, 37));
-        txtContrasenia.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtNomDuenio.setBackground(new java.awt.Color(224, 224, 224));
+        txtNomDuenio.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtNomDuenio.setForeground(new java.awt.Color(6, 100, 37));
+        txtNomDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
-        txtIdContrasenia.setBackground(new java.awt.Color(224, 224, 224));
-        txtIdContrasenia.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtIdContrasenia.setForeground(new java.awt.Color(6, 100, 37));
-        txtIdContrasenia.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtDirDuenio.setBackground(new java.awt.Color(224, 224, 224));
+        txtDirDuenio.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
+        txtDirDuenio.setForeground(new java.awt.Color(6, 100, 37));
+        txtDirDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
-        txtDocumento.setBackground(new java.awt.Color(224, 224, 224));
-        txtDocumento.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtDocumento.setForeground(new java.awt.Color(6, 100, 37));
-        txtDocumento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtObservaciones.setBackground(new java.awt.Color(224, 224, 224));
+        txtObservaciones.setColumns(20);
+        txtObservaciones.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtObservaciones.setForeground(new java.awt.Color(6, 100, 37));
+        txtObservaciones.setRows(5);
+        txtObservaciones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        jScrollPane1.setViewportView(txtObservaciones);
 
-        txtHistorialContrasenias.setBackground(new java.awt.Color(224, 224, 224));
-        txtHistorialContrasenias.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtHistorialContrasenias.setForeground(new java.awt.Color(6, 100, 37));
-        txtHistorialContrasenias.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        cmbAtEsp.setBackground(new java.awt.Color(224, 224, 224));
+        cmbAtEsp.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        cmbAtEsp.setForeground(new java.awt.Color(6, 100, 37));
+        cmbAtEsp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Desconocido", "Sí", "No" }));
+        cmbAtEsp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+
+        cmbAlergico.setBackground(new java.awt.Color(224, 224, 224));
+        cmbAlergico.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        cmbAlergico.setForeground(new java.awt.Color(6, 100, 37));
+        cmbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Desconocido", "Sí", "No" }));
+        cmbAlergico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
         FormPanel.setLayout(FormPanelLayout);
         FormPanelLayout.setHorizontalGroup(
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FormPanelLayout.createSequentialGroup()
-                .addGap(217, 217, 217)
-                .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FormPanelLayout.createSequentialGroup()
+                                .addGap(242, 242, 242)
+                                .addComponent(jLabel22)
+                                .addGap(122, 122, 122)
+                                .addComponent(jLabel23))
+                            .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(FormPanelLayout.createSequentialGroup()
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtTelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel21)
+                                            .addComponent(cmbAlergico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(FormPanelLayout.createSequentialGroup()
+                                            .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(cmbAtEsp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel16))
+                                            .addGap(18, 18, Short.MAX_VALUE))
+                                        .addGroup(FormPanelLayout.createSequentialGroup()
+                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                            .addGap(22, 22, 22)))
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtNomDuenio)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FormPanelLayout.createSequentialGroup()
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtNomMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel8))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel14)
+                                        .addComponent(txtRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addGap(217, 217, 217)
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
                         .addComponent(btnLimpiar)
                         .addGap(29, 29, 29)
-                        .addComponent(btnGuardar)
-                        .addGap(222, 222, 222))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
-                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel8)
-                            .addComponent(txtIdUsuario)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel21)
-                            .addComponent(txtDocumento)
-                            .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel14)
-                                .addComponent(txtIdPersona)
-                                .addComponent(jLabel22)
-                                .addComponent(txtIdContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtFechaCreacionUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(40, 40, 40)
-                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtHistorialContrasenias)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtContrasenia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25))))
+                        .addComponent(btnGuardar)))
+                .addGap(12, 12, 12))
         );
         FormPanelLayout.setVerticalGroup(
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -521,54 +539,53 @@ public class UploadDataPage extends javax.swing.JFrame {
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
-                .addGap(55, 55, 55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel14)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdPersona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNomMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(3, 3, 3)
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbAlergico, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbAtEsp, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNomDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel22)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(64, 64, 64))
-                        .addGroup(FormPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel12)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel23)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addGroup(FormPanelLayout.createSequentialGroup()
-                                    .addGap(21, 21, 21)
-                                    .addComponent(txtHistorialContrasenias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(FormPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel16)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtFechaCreacionUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(FormPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel21)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
+                            .addComponent(jLabel23))
+                        .addGap(31, 31, 31)))
+                .addGap(16, 16, 16)
+                .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(51, 51, 51)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(FormPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(50, 50, 50)
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnLimpiar))
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addGap(82, 82, 82))
         );
 
         javax.swing.GroupLayout ttlPanelLayout = new javax.swing.GroupLayout(ttlPanel);
@@ -676,47 +693,38 @@ public class UploadDataPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDashBoardActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        txtIdUsuario.setText("");
-        txtIdPersona.setText("");
-        txtIdPersona.setText("");
-        txtNombreUsuario.setText("");
-        txtDocumento.setText("");
-        txtIdContrasenia.setText("");
-        txtContrasenia.setText("");
-        txtFechaCreacion.setText("");
-        txtHistorialContrasenias.setText("");
-        txtFechaCreacionUsuario.setText("");
+        txtNomMascota.setText("");
+        txtNomDuenio.setText("");
+        txtColor.setText("");
+        txtDirDuenio.setText("");
+        txtObservaciones.setText("");
+        txtRaza.setText("");
+        txtTelDuenio.setText("");
+        cmbAlergico.setSelectedIndex(0);
+        cmbAtEsp.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        String us_id_usuario = txtIdUsuario.getText();
-        String pr_id_persona = txtIdPersona.getText();
-        String us_nombre_usuario = txtNombreUsuario.getText();
-        String us_documento = txtDocumento.getText();
-        String co_id_contrasenia = txtIdContrasenia.getText();
-        String co_contrasenia = txtContrasenia.getText();
-        String co_fecha_creacion = txtFechaCreacion.getText();
-        String co_historial_contrasenias = txtHistorialContrasenias.getText();
-        String us_fecha_creacion = txtFechaCreacionUsuario.getText();
+        
+        String nombreMasco = txtNomMascota.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String observaciones = txtObservaciones.getText();
+        String alergico = (String) cmbAlergico.getSelectedItem();
+        String atenEsp = (String) cmbAtEsp.getSelectedItem();
+        String nomDuenio = txtNomDuenio.getText();
+        String telDuenio = txtTelDuenio.getText();
+        String dirDuenio = txtDirDuenio.getText();
 
-        try {
-            controladora.guardar(us_id_usuario, pr_id_persona, us_nombre_usuario, us_documento, co_id_contrasenia, co_contrasenia, co_fecha_creacion, co_historial_contrasenias, us_fecha_creacion);
-            mostrarMensaje("Se guardó correctamente", "Guardado exitoso", JOptionPane.INFORMATION_MESSAGE);
-        } catch (PreexistingEntityException ex) {
-            mostrarMensaje("Ya existe una entidad con la misma clave primaria.", "Error", JOptionPane.ERROR_MESSAGE);
-        } catch (Exception ex) {
-            mostrarMensaje("Error al guardar datos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
-
-    }//GEN-LAST:event_btnGuardarActionPerformed
-
-    private void mostrarMensaje(String mensaje, String titulo, int tipoMensaje) {
-        JOptionPane optionPane = new JOptionPane(mensaje);
-        optionPane.setMessageType(tipoMensaje);
-        JDialog dialog = optionPane.createDialog(titulo);
+        control.guardar(nombreMasco, raza, color, observaciones, alergico, atenEsp, nomDuenio, telDuenio, dirDuenio);
+        
+        JOptionPane optionPane = new JOptionPane("Los datos han sido guardados correctamente");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado exitoso");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
-    }
+
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FormPanel;
@@ -734,6 +742,8 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JButton btnNotificaciones;
     private javax.swing.JButton btnProductos;
     private javax.swing.JButton btnVerDatos;
+    private javax.swing.JComboBox<String> cmbAlergico;
+    private javax.swing.JComboBox<String> cmbAtEsp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -758,20 +768,19 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel tituloDelPanel;
     private javax.swing.JPanel ttlPanel;
     private javax.swing.JTextField txtBuscar;
-    private javax.swing.JTextField txtContrasenia;
-    private javax.swing.JTextField txtDocumento;
-    private javax.swing.JTextField txtFechaCreacion;
-    private javax.swing.JTextField txtFechaCreacionUsuario;
-    private javax.swing.JTextField txtHistorialContrasenias;
-    private javax.swing.JTextField txtIdContrasenia;
-    private javax.swing.JTextField txtIdPersona;
-    private javax.swing.JTextField txtIdUsuario;
-    private javax.swing.JTextField txtNombreUsuario;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtDirDuenio;
+    private javax.swing.JTextField txtNomDuenio;
+    private javax.swing.JTextField txtNomMascota;
+    private javax.swing.JTextArea txtObservaciones;
+    private javax.swing.JTextField txtRaza;
+    private javax.swing.JTextField txtTelDuenio;
     // End of variables declaration//GEN-END:variables
 }

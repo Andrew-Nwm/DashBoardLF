@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
-  <persistence-unit name="LifeMatesPU" transaction-type="RESOURCE_LOCAL">
-    <!-- Proveedor de Persistencia (EclipseLink en este caso) -->
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="peluqueriaCaninalfPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <!-- Clases de Entidad -->
-    <class>com.mycompany.lifemates_dashboard.logica.Password</class>
-    <class>com.mycompany.lifemates_dashboard.logica.Users</class>
-    <!-- Configuración de la Unidad de Persistencia -->
+    <class>com.mycompany.lifemates_dashboard.logica.Duenio</class>
+    <class>com.mycompany.lifemates_dashboard.logica.Mascota</class>
     <properties>
-      <!-- Configuración de la Base de Datos -->
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bd_lifemates?serverTimezone=UTC"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/peluqueria_canina_lf?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value=""/>
-      <!-- Configuración de la generación de tablas -->
-      <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
-      <!-- Configuración adicional para EclipseLink -->
-      <property name="eclipselink.logging.level" value="ALL"/>
-      <property name="eclipselink.ddl-generation" value="create-tables"/>
-      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
-      <!-- Configuración de manejo de Lazy Loading -->
-      <property name="eclipselink.weaving" value="false"/>
-      <property name="eclipselink.logging.logger" value="JavaLogger"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
 </persistence>
