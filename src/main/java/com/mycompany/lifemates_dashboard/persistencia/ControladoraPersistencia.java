@@ -22,6 +22,12 @@ public class ControladoraPersistencia {
         return emf.createEntityManager();
     }
 
+    public void closeEntityManagerFactory() {
+        if (emf != null && emf.isOpen()) {
+            emf.close();
+        }
+    }
+
     public void guardar(Users users, Password password) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         EntityTransaction tx = null;
@@ -30,16 +36,23 @@ public class ControladoraPersistencia {
             tx = em.getTransaction();
             tx.begin();
 
-            usersJpa.create(users);
+            // Guardar primero la contraseña para establecer la relación correctamente
             passwordJpa.create(password);
+            usersJpa.create(users);
 
             tx.commit();
         } catch (PreexistingEntityException ex) {
-            ex.printStackTrace(); 
-            throw ex;
-        } catch (Exception ex) {
+            if (tx != null && tx.isActive()) {
+                tx.rollback();
+            }
             ex.printStackTrace();
-            throw ex;
+            throw ex; // Lanzar la excepción específica
+        } catch (Exception ex) {
+            if (tx != null && tx.isActive()) {
+                tx.rollback();
+            }
+            ex.printStackTrace();
+            throw ex; // Lanzar la excepción específica
         } finally {
             if (em != null) {
                 em.close();

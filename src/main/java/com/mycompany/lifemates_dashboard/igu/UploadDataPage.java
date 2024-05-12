@@ -677,10 +677,15 @@ public class UploadDataPage extends javax.swing.JFrame {
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtIdUsuario.setText("");
-        txtNombreUsuario.setText("");
-        txtFechaCreacionUsuario.setText("");
         txtIdPersona.setText("");
+        txtIdPersona.setText("");
+        txtNombreUsuario.setText("");
+        txtDocumento.setText("");
+        txtIdContrasenia.setText("");
+        txtContrasenia.setText("");
         txtFechaCreacion.setText("");
+        txtHistorialContrasenias.setText("");
+        txtFechaCreacionUsuario.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
@@ -698,11 +703,9 @@ public class UploadDataPage extends javax.swing.JFrame {
             controladora.guardar(us_id_usuario, pr_id_persona, us_nombre_usuario, us_documento, co_id_contrasenia, co_contrasenia, co_fecha_creacion, co_historial_contrasenias, us_fecha_creacion);
             mostrarMensaje("Se guardó correctamente", "Guardado exitoso", JOptionPane.INFORMATION_MESSAGE);
         } catch (PreexistingEntityException ex) {
-            System.err.println("Ya existe una entidad con la misma clave primaria.");
             mostrarMensaje("Ya existe una entidad con la misma clave primaria.", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (Exception ex) {
-            System.err.println("Error al guardar datos: " + ex.getMessage());
-            mostrarMensaje("Error al guardar datos", "Error", JOptionPane.ERROR_MESSAGE);
+            mostrarMensaje("Error al guardar datos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_btnGuardarActionPerformed

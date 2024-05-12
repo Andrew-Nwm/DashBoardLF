@@ -14,7 +14,7 @@ public class Password implements Serializable {
     @Id
     private String co_id_contrasenia;
 
-    @OneToOne(mappedBy = "password", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "us_id_usuario", referencedColumnName = "us_id_usuario")
     private Users user;
 
@@ -25,9 +25,8 @@ public class Password implements Serializable {
     public Password() {
     }
 
-    public Password(String co_id_contrasenia, Users user, String co_contrasenia, String co_fecha_creacion, String co_historial_contrasenias) {
+    public Password(String co_id_contrasenia, String co_contrasenia, String co_fecha_creacion, String co_historial_contrasenias) {
         this.co_id_contrasenia = co_id_contrasenia;
-        this.user = user;
         this.co_contrasenia = co_contrasenia;
         this.co_fecha_creacion = co_fecha_creacion;
         this.co_historial_contrasenias = co_historial_contrasenias;

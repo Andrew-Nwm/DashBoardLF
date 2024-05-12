@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.FetchType;
 import javax.persistence.CascadeType;
-import javax.persistence.JoinColumn;
 
 @Entity
 public class Users implements Serializable {
@@ -17,8 +16,7 @@ public class Users implements Serializable {
     private String us_nombre_usuario;
     private String us_documento;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "us_id_usuario", referencedColumnName = "us_id_usuario")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
     private Password password;
 
     private String us_fecha_creacion;

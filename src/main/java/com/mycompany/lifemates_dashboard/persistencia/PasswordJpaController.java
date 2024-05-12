@@ -1,27 +1,28 @@
 package com.mycompany.lifemates_dashboard.persistencia;
 
 import com.mycompany.lifemates_dashboard.logica.Password;
-import java.io.Serializable;
-import javax.persistence.Query;
-import javax.persistence.EntityNotFoundException;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import com.mycompany.lifemates_dashboard.logica.Users;
-import com.mycompany.lifemates_dashboard.persistencia.exceptions.NonexistentEntityException;
 import com.mycompany.lifemates_dashboard.persistencia.exceptions.PreexistingEntityException;
-import java.util.List;
+import com.mycompany.lifemates_dashboard.persistencia.exceptions.NonexistentEntityException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
-
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import java.io.Serializable;
+import java.util.List;
 
 public class PasswordJpaController implements Serializable {
+
+    private final EntityManagerFactory emf;
 
     public PasswordJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
-    
+
     public PasswordJpaController() {
         emf = Persistence.createEntityManagerFactory("LifeMatesPU");
     }
@@ -37,19 +38,10 @@ public class PasswordJpaController implements Serializable {
             em.getTransaction().begin();
             Users user = password.getUser();
             if (user != null) {
-                user = em.getReference(user.getClass(), user.getUs_id_usuario());
+                user = em.getReference(Users.class, user.getUs_id_usuario());
                 password.setUser(user);
             }
             em.persist(password);
-            if (user != null) {
-                Password oldPasswordOfUser = user.getPassword();
-                if (oldPasswordOfUser != null) {
-                    oldPasswordOfUser.setUser(null);
-                    oldPasswordOfUser = em.merge(oldPasswordOfUser);
-                }
-                user.setPassword(password);
-                user = em.merge(user);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             if (findPassword(password.getCo_id_contrasenia()) != null) {
@@ -68,27 +60,7 @@ public class PasswordJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Password persistentPassword = em.find(Password.class, password.getCo_id_contrasenia());
-            Users userOld = persistentPassword.getUser();
-            Users userNew = password.getUser();
-            if (userNew != null) {
-                userNew = em.getReference(userNew.getClass(), userNew.getUs_id_usuario());
-                password.setUser(userNew);
-            }
             password = em.merge(password);
-            if (userOld != null && !userOld.equals(userNew)) {
-                userOld.setPassword(null);
-                userOld = em.merge(userOld);
-            }
-            if (userNew != null && !userNew.equals(userOld)) {
-                Password oldPasswordOfUser = userNew.getPassword();
-                if (oldPasswordOfUser != null) {
-                    oldPasswordOfUser.setUser(null);
-                    oldPasswordOfUser = em.merge(oldPasswordOfUser);
-                }
-                userNew.setPassword(password);
-                userNew = em.merge(userNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -143,7 +115,7 @@ public class PasswordJpaController implements Serializable {
     private List<Password> findPasswordEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
-            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            CriteriaQuery<Password> cq = em.getCriteriaBuilder().createQuery(Password.class);
             cq.select(cq.from(Password.class));
             Query q = em.createQuery(cq);
             if (!all) {
@@ -168,7 +140,7 @@ public class PasswordJpaController implements Serializable {
     public int getPasswordCount() {
         EntityManager em = getEntityManager();
         try {
-            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            CriteriaQuery<Long> cq = em.getCriteriaBuilder().createQuery(Long.class);
             Root<Password> rt = cq.from(Password.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
@@ -177,5 +149,4 @@ public class PasswordJpaController implements Serializable {
             em.close();
         }
     }
-
 }

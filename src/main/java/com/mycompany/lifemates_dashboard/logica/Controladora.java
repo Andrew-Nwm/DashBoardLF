@@ -18,6 +18,12 @@ public class Controladora {
         return em;
     }
 
+    private void closeEntityManager() {
+        if (em != null && em.isOpen()) {
+            em.close();
+        }
+    }
+
     public void guardar(String us_id_usuario, String pr_id_persona, String us_nombre_usuario, String us_documento, String co_id_contrasenia, String co_contrasenia, String co_fecha_creacion, String co_historial_contrasenias, String us_fecha_creacion) throws PreexistingEntityException, Exception {
         EntityTransaction tx = null;
         try {
@@ -52,9 +58,7 @@ public class Controladora {
             }
             throw ex;
         } finally {
-            if (em != null) {
-                em.close(); // Cerrar el EntityManager
-            }
+            closeEntityManager(); // Cerrar el EntityManager correctamente
         }
     }
 }
