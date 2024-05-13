@@ -23,7 +23,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnProductos = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        btnClientes = new javax.swing.JButton();
+        btnMascotas = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         btnEmpleados = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -39,8 +39,6 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnIngresarDatos = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        btnVerDatos = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
         ttlPanel = new javax.swing.JPanel();
         txtBuscar = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
@@ -53,7 +51,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         txtColor = new javax.swing.JTextField();
-        txtTelDuenio = new javax.swing.JTextField();
+        txtCelDuenio = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -115,11 +113,16 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/caja.png"))); // NOI18N
 
-        btnClientes.setBackground(new java.awt.Color(255, 255, 255));
-        btnClientes.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
-        btnClientes.setForeground(new java.awt.Color(12, 202, 74));
-        btnClientes.setText("Clientes");
-        btnClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMascotas.setBackground(new java.awt.Color(255, 255, 255));
+        btnMascotas.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        btnMascotas.setForeground(new java.awt.Color(12, 202, 74));
+        btnMascotas.setText("Mascotas");
+        btnMascotas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMascotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMascotasActionPerformed(evt);
+            }
+        });
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/cliente.png"))); // NOI18N
@@ -213,16 +216,6 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/entry-data.png"))); // NOI18N
 
-        btnVerDatos.setBackground(new java.awt.Color(255, 255, 255));
-        btnVerDatos.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
-        btnVerDatos.setForeground(new java.awt.Color(12, 202, 74));
-        btnVerDatos.setText("Ver Datos");
-        btnVerDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnVerDatos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/data-scientist.png"))); // NOI18N
-
         javax.swing.GroupLayout NavBarPanelLayout = new javax.swing.GroupLayout(NavBarPanel);
         NavBarPanel.setLayout(NavBarPanelLayout);
         NavBarPanelLayout.setHorizontalGroup(
@@ -239,19 +232,17 @@ public class UploadDataPage extends javax.swing.JFrame {
                                 .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnContactarASoporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnNotificaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnEmpleados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMascotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnDashBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnIngresarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnVerDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnIngresarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(9, 9, 9))
                     .addComponent(jSeparator2)
                     .addComponent(jSeparator4)
@@ -288,7 +279,7 @@ public class UploadDataPage extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMascotas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -305,16 +296,12 @@ public class UploadDataPage extends javax.swing.JFrame {
                 .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIngresarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVerDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(NavBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -374,10 +361,10 @@ public class UploadDataPage extends javax.swing.JFrame {
         txtColor.setForeground(new java.awt.Color(6, 100, 37));
         txtColor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
-        txtTelDuenio.setBackground(new java.awt.Color(224, 224, 224));
-        txtTelDuenio.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
-        txtTelDuenio.setForeground(new java.awt.Color(6, 100, 37));
-        txtTelDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtCelDuenio.setBackground(new java.awt.Color(224, 224, 224));
+        txtCelDuenio.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        txtCelDuenio.setForeground(new java.awt.Color(6, 100, 37));
+        txtCelDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         jLabel13.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
@@ -444,9 +431,12 @@ public class UploadDataPage extends javax.swing.JFrame {
         txtNomDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
 
         txtDirDuenio.setBackground(new java.awt.Color(224, 224, 224));
-        txtDirDuenio.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
+        txtDirDuenio.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         txtDirDuenio.setForeground(new java.awt.Color(6, 100, 37));
         txtDirDuenio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(12, 202, 74), 1, true));
+        txtDirDuenio.setMaximumSize(new java.awt.Dimension(224, 26));
+        txtDirDuenio.setMinimumSize(new java.awt.Dimension(224, 26));
+        txtDirDuenio.setPreferredSize(new java.awt.Dimension(224, 26));
 
         txtObservaciones.setBackground(new java.awt.Color(224, 224, 224));
         txtObservaciones.setColumns(20);
@@ -487,7 +477,7 @@ public class UploadDataPage extends javax.swing.JFrame {
                                     .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtTelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtCelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel21)
                                             .addComponent(cmbAlergico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -574,12 +564,12 @@ public class UploadDataPage extends javax.swing.JFrame {
                             .addComponent(jLabel11)
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(FormPanelLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(50, 50, 50)
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -699,7 +689,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         txtDirDuenio.setText("");
         txtObservaciones.setText("");
         txtRaza.setText("");
-        txtTelDuenio.setText("");
+        txtCelDuenio.setText("");
         cmbAlergico.setSelectedIndex(0);
         cmbAtEsp.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
@@ -713,10 +703,10 @@ public class UploadDataPage extends javax.swing.JFrame {
         String alergico = (String) cmbAlergico.getSelectedItem();
         String atenEsp = (String) cmbAtEsp.getSelectedItem();
         String nomDuenio = txtNomDuenio.getText();
-        String telDuenio = txtTelDuenio.getText();
+        String celDuenio = txtCelDuenio.getText();
         String dirDuenio = txtDirDuenio.getText();
 
-        control.guardar(nombreMasco, raza, color, observaciones, alergico, atenEsp, nomDuenio, telDuenio, dirDuenio);
+        control.guardar(nombreMasco, raza, color, observaciones, alergico, atenEsp, nomDuenio, celDuenio, dirDuenio);
         
         JOptionPane optionPane = new JOptionPane("Los datos han sido guardados correctamente");
         optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
@@ -726,12 +716,19 @@ public class UploadDataPage extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    private void btnMascotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMascotasActionPerformed
+        ViewCustomerDataPage customers = new ViewCustomerDataPage();
+        customers.setVisible(true);
+        customers.setLocationRelativeTo(null);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnMascotasActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FormPanel;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel NavBarPanel;
     private javax.swing.JButton btnCerrarSesion;
-    private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnContactarASoporte;
     private javax.swing.JButton btnDashBoard;
@@ -739,9 +736,9 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIngresarDatos;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnMascotas;
     private javax.swing.JButton btnNotificaciones;
     private javax.swing.JButton btnProductos;
-    private javax.swing.JButton btnVerDatos;
     private javax.swing.JComboBox<String> cmbAlergico;
     private javax.swing.JComboBox<String> cmbAtEsp;
     private javax.swing.JLabel jLabel1;
@@ -752,7 +749,6 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -775,12 +771,12 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JLabel tituloDelPanel;
     private javax.swing.JPanel ttlPanel;
     private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtCelDuenio;
     private javax.swing.JTextField txtColor;
     private javax.swing.JTextField txtDirDuenio;
     private javax.swing.JTextField txtNomDuenio;
     private javax.swing.JTextField txtNomMascota;
     private javax.swing.JTextArea txtObservaciones;
     private javax.swing.JTextField txtRaza;
-    private javax.swing.JTextField txtTelDuenio;
     // End of variables declaration//GEN-END:variables
 }

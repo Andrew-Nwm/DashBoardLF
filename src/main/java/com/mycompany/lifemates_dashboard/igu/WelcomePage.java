@@ -32,7 +32,7 @@ public class WelcomePage extends javax.swing.JFrame {
         btnLogIn = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnSolicitarCuenta = new javax.swing.JButton();
         RightPanel = new javax.swing.JPanel();
         Title1 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -180,9 +180,9 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(148, 201, 147));
         jLabel2.setText("¿No tienes una cuenta?");
 
-        jButton1.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(12, 202, 74));
-        jButton1.setText("Solicitar una cuenta");
+        btnSolicitarCuenta.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
+        btnSolicitarCuenta.setForeground(new java.awt.Color(12, 202, 74));
+        btnSolicitarCuenta.setText("Solicitar una cuenta");
 
         javax.swing.GroupLayout LeftPanelLayout = new javax.swing.GroupLayout(LeftPanel);
         LeftPanel.setLayout(LeftPanelLayout);
@@ -216,7 +216,7 @@ public class WelcomePage extends javax.swing.JFrame {
                     .addGroup(LeftPanelLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1))
+                        .addComponent(btnSolicitarCuenta))
                     .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(LeftPanelLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
@@ -258,7 +258,7 @@ public class WelcomePage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSolicitarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53))
         );
 
@@ -386,10 +386,10 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel amor;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnLogIn;
+    private javax.swing.JButton btnSolicitarCuenta;
     private javax.swing.JLabel contrasenia;
     private javax.swing.JLabel croptedIcon;
     private javax.swing.JLabel documento;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
