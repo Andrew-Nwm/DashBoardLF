@@ -368,6 +368,11 @@ public class ViewCustomerDataPage extends javax.swing.JFrame {
         btnEditar.setForeground(new java.awt.Color(12, 202, 74));
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/edit-text.png"))); // NOI18N
         btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -535,6 +540,25 @@ public class ViewCustomerDataPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        if (tablaMascotas.getRowCount() > 0) {
+            if (tablaMascotas.getSelectedRow() != -1) {
+                int num_cliente = Integer.parseInt(String.valueOf(tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(), 0)));
+                
+                ModifyDataPage pantallaModif = new ModifyDataPage(num_cliente);
+                pantallaModif.setVisible(true);
+                pantallaModif.setLocationRelativeTo(null);
+                this.dispose();
+                
+                
+            } else {
+                mostrarMensaje("No ha sido seleccionada ninguna mascota", "Error", "Error al eliminar");
+            }
+        } else {
+            mostrarMensaje("No hay nada para eliminar en la tabla", "Error", "Error al eliminar");
+        }
+    }//GEN-LAST:event_btnEditarActionPerformed
+
     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
         if (tipo.equals("Info")) {
@@ -596,7 +620,7 @@ public class ViewCustomerDataPage extends javax.swing.JFrame {
         };
 
         //Ahora vamos a establecer los nombres de las columnas
-        String titulos[] = {"Num", "Nombre", "Color", "Raza", "Alergico", "At. esp", "Dueño", "Telefono", "Direccion"};
+        String titulos[] = {"Num", "Nombre", "Color", "Raza", "Alergico", "At. esp", "Observaciones","Dueño", "Telefono", "Direccion"};
         modelotabla.setColumnIdentifiers(titulos);
 
         //Ahora vamos a cargar los datos desde la BD
@@ -605,7 +629,7 @@ public class ViewCustomerDataPage extends javax.swing.JFrame {
         //Ahora se va a recorrer la lista para mostrar cada uno de los elementos de la tabla
         if (listaMascotas != null) {
             for (Mascota masco : listaMascotas) {
-                Object[] mascota = {masco.getNum_cliente(), masco.getNombre(), masco.getColor(), masco.getRaza(), masco.getAlergico(), masco.getAtencion_especial(), masco.getUnDuenio().getNombre(), masco.getUnDuenio().getCelDuenio(), masco.getUnDuenio().getDirDuenio()};
+                Object[] mascota = {masco.getNum_cliente(), masco.getNombre(), masco.getColor(), masco.getRaza(), masco.getAlergico(), masco.getAtencion_especial(),masco.getObservaciones(), masco.getUnDuenio().getNombre(), masco.getUnDuenio().getCelDuenio(), masco.getUnDuenio().getDirDuenio()};
 
                 modelotabla.addRow(mascota);
 

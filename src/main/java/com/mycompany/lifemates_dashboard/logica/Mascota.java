@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 public class Mascota implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int num_cliente;
     private String nombre;
     private String raza;

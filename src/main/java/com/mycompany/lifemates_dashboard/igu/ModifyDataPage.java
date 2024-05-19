@@ -1,15 +1,21 @@
 package com.mycompany.lifemates_dashboard.igu;
 
 import com.mycompany.lifemates_dashboard.logica.Controladora;
+import com.mycompany.lifemates_dashboard.logica.Mascota;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
-public class UploadDataPage extends javax.swing.JFrame {
+public class ModifyDataPage extends javax.swing.JFrame {
 
-    Controladora control = new Controladora();
+    Controladora control = null;
+    int num_cliente;
+    Mascota masco;
 
-    public UploadDataPage() {
+    public ModifyDataPage(int num_cliente) {
+        control = new Controladora();
+        //this.num_cliente = num_cliente;
         initComponents();
+        cargarDatos(num_cliente);
     }
 
     @SuppressWarnings("unchecked")
@@ -70,8 +76,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         cmbAlergico = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("LifeMates | Ingresar Datos");
-        setMaximumSize(new java.awt.Dimension(1080, 720));
+        setTitle("LifeMates | Modificar Datos");
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setResizable(false);
 
@@ -112,7 +117,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/caja.png"))); // NOI18N
 
-        btnMascotas.setBackground(new java.awt.Color(255, 255, 255));
+        btnMascotas.setBackground(new java.awt.Color(224, 224, 224));
         btnMascotas.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         btnMascotas.setForeground(new java.awt.Color(12, 202, 74));
         btnMascotas.setText("Mascotas");
@@ -200,7 +205,7 @@ public class UploadDataPage extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/croptedicon.png"))); // NOI18N
         jLabel2.setText("LifeMates");
 
-        btnIngresarDatos.setBackground(new java.awt.Color(224, 224, 224));
+        btnIngresarDatos.setBackground(new java.awt.Color(255, 255, 255));
         btnIngresarDatos.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         btnIngresarDatos.setForeground(new java.awt.Color(12, 202, 74));
         btnIngresarDatos.setText("Ingresar Datos");
@@ -327,7 +332,7 @@ public class UploadDataPage extends javax.swing.JFrame {
 
         tituloDelPanel.setFont(new java.awt.Font("Chonburi", 0, 22)); // NOI18N
         tituloDelPanel.setForeground(new java.awt.Color(12, 202, 74));
-        tituloDelPanel.setText("Ingreso de Datos");
+        tituloDelPanel.setText("Modificación de datos");
 
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
         FormPanel.setMaximumSize(new java.awt.Dimension(745, 593));
@@ -476,14 +481,14 @@ public class UploadDataPage extends javax.swing.JFrame {
                                             .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(cmbAtEsp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jLabel16))
-                                            .addGap(18, 18, Short.MAX_VALUE))
+                                            .addGap(18, 22, Short.MAX_VALUE))
                                         .addGroup(FormPanelLayout.createSequentialGroup()
                                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                             .addGap(22, 22, 22)))
                                     .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNomDuenio)))
+                                        .addComponent(txtNomDuenio, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FormPanelLayout.createSequentialGroup()
                                     .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtNomMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -504,7 +509,7 @@ public class UploadDataPage extends javax.swing.JFrame {
                             .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(12, 12, 12))
             .addGroup(FormPanelLayout.createSequentialGroup()
-                .addGap(304, 304, 304)
+                .addGap(302, 302, 302)
                 .addComponent(btnGuardar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -559,9 +564,9 @@ public class UploadDataPage extends javax.swing.JFrame {
                         .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDirDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(51, 51, 51)
+                .addGap(50, 50, 50)
                 .addComponent(btnGuardar)
-                .addGap(81, 81, 81))
+                .addGap(82, 82, 82))
         );
 
         javax.swing.GroupLayout ttlPanelLayout = new javax.swing.GroupLayout(ttlPanel);
@@ -573,30 +578,27 @@ public class UploadDataPage extends javax.swing.JFrame {
                 .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ttlPanelLayout.createSequentialGroup()
                         .addComponent(tituloDelPanel)
-                        .addGap(1681, 1681, 1681))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ttlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(ttlPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jSeparator3)
-                            .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 741, Short.MAX_VALUE))
-                        .addGap(1146, 1146, 1146))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jSeparator3)
+                        .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 23, Short.MAX_VALUE))
         );
         ttlPanelLayout.setVerticalGroup(
             ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ttlPanelLayout.createSequentialGroup()
                 .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ttlPanelLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(ttlPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(tituloDelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(ttlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tituloDelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ttlPanelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -611,8 +613,7 @@ public class UploadDataPage extends javax.swing.JFrame {
             .addGroup(MainPanelLayout.createSequentialGroup()
                 .addComponent(NavBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ttlPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 841, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(ttlPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE))
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -659,6 +660,8 @@ public class UploadDataPage extends javax.swing.JFrame {
         UploadDataPage upload = new UploadDataPage();
         upload.setVisible(true);
         upload.setLocationRelativeTo(null);
+
+        this.dispose();
     }//GEN-LAST:event_btnIngresarDatosActionPerformed
 
     private void btnDashBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashBoardActionPerformed
@@ -670,12 +673,14 @@ public class UploadDataPage extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
+        //Datos de mascota
         String nombreMasco = txtNomMascota.getText();
         String raza = txtRaza.getText();
         String color = txtColor.getText();
         String observaciones = txtObservaciones.getText();
         String alergico = (String) cmbAlergico.getSelectedItem();
         String atenEsp = (String) cmbAtEsp.getSelectedItem();
+        //Datos del dueño
         String nomDuenio = txtNomDuenio.getText();
         String celDuenio = txtCelDuenio.getText();
         String dirDuenio = txtDirDuenio.getText();
@@ -685,13 +690,9 @@ public class UploadDataPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.", "Campos incompletos", JOptionPane.WARNING_MESSAGE);
         } else {
 
-            control.guardar(nombreMasco, raza, color, observaciones, alergico, atenEsp, nomDuenio, celDuenio, dirDuenio);
+            control.modificarMascota(masco, nombreMasco, raza, color, observaciones, alergico, atenEsp, nomDuenio, celDuenio, dirDuenio);
 
-            JOptionPane optionPane = new JOptionPane("Los datos han sido guardados correctamente");
-            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-            JDialog dialog = optionPane.createDialog("Guardado exitoso");
-            dialog.setAlwaysOnTop(true);
-            dialog.setVisible(true);
+            mostrarMensaje("Edición realizada correctamente", "Info", "Edición correcta");
 
             txtNomMascota.setText("");
             txtNomDuenio.setText("");
@@ -702,8 +703,12 @@ public class UploadDataPage extends javax.swing.JFrame {
             txtCelDuenio.setText("");
             cmbAlergico.setSelectedIndex(0);
             cmbAtEsp.setSelectedIndex(0);
-        }
 
+            ViewCustomerDataPage customer = new ViewCustomerDataPage();
+            customer.setVisible(true);
+            customer.setLocationRelativeTo(null);
+            this.dispose();
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnMascotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMascotasActionPerformed
@@ -768,4 +773,49 @@ public class UploadDataPage extends javax.swing.JFrame {
     private javax.swing.JTextArea txtObservaciones;
     private javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
+
+    private void cargarDatos(int num_cliente) {
+        this.masco = control.traerMascota(num_cliente);
+
+        txtNomMascota.setText(masco.getNombre());
+        txtRaza.setText(masco.getRaza());
+        txtColor.setText(masco.getColor());
+        txtObservaciones.setText(masco.getObservaciones());
+        txtNomDuenio.setText(masco.getUnDuenio().getNombre());
+        txtCelDuenio.setText(masco.getUnDuenio().getCelDuenio());
+        txtDirDuenio.setText(masco.getUnDuenio().getDirDuenio());
+
+        if (masco.getAlergico().equals("Desconocido")) {
+            cmbAlergico.setSelectedIndex(1);
+        } else if (masco.getAlergico().equals("Sí")) {
+            cmbAlergico.setSelectedIndex(2);
+        } else if (masco.getAlergico().equals("No")) {
+            cmbAlergico.setSelectedIndex(3);
+        } else {
+            cmbAlergico.setSelectedIndex(0);
+        }
+
+        if (masco.getAtencion_especial().equals("Desconocido")) {
+            cmbAtEsp.setSelectedIndex(1);
+        } else if (masco.getAtencion_especial().equals("Sí")) {
+            cmbAtEsp.setSelectedIndex(2);
+        } else if (masco.getAtencion_especial().equals("No")) {
+            cmbAtEsp.setSelectedIndex(3);
+        } else {
+            cmbAtEsp.setSelectedIndex(0);
+        }
+
+    }
+
+    public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("Info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
 }

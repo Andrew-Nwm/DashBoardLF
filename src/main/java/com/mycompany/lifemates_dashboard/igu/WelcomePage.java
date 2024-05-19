@@ -24,15 +24,10 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        FormPanel = new javax.swing.JPanel();
-        documento = new javax.swing.JLabel();
-        txtDocumento = new javax.swing.JTextField();
-        contrasenia = new javax.swing.JLabel();
-        txtContrasenia = new javax.swing.JPasswordField();
         btnLogIn = new javax.swing.JButton();
-        btnClean = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         btnSolicitarCuenta = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
         RightPanel = new javax.swing.JPanel();
         Title1 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -86,7 +81,7 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Chonburi", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(12, 202, 74));
-        jLabel5.setText("inicia sesión");
+        jLabel5.setText("ingresa para");
 
         jLabel7.setFont(new java.awt.Font("Chonburi", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(12, 202, 74));
@@ -98,81 +93,22 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Chonburi", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(148, 201, 147));
-        jLabel9.setText("para acceder");
+        jLabel9.setText("tener acceso");
 
         jLabel10.setFont(new java.awt.Font("Chonburi", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(12, 202, 74));
-        jLabel10.setText("LifeMates");
-
-        FormPanel.setBackground(new java.awt.Color(255, 255, 255));
-        FormPanel.setForeground(new java.awt.Color(255, 255, 255));
-
-        documento.setFont(new java.awt.Font("Chonburi", 0, 20)); // NOI18N
-        documento.setForeground(new java.awt.Color(12, 202, 74));
-        documento.setText("Documento de identidad");
-
-        txtDocumento.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtDocumento.setForeground(new java.awt.Color(6, 100, 37));
-        txtDocumento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(12, 202, 74)));
-
-        contrasenia.setFont(new java.awt.Font("Chonburi", 0, 20)); // NOI18N
-        contrasenia.setForeground(new java.awt.Color(12, 202, 74));
-        contrasenia.setText("Contraseña");
-
-        txtContrasenia.setFont(new java.awt.Font("Chonburi", 0, 18)); // NOI18N
-        txtContrasenia.setForeground(new java.awt.Color(6, 100, 37));
-        txtContrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(12, 202, 74)));
-
-        javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
-        FormPanel.setLayout(FormPanelLayout);
-        FormPanelLayout.setHorizontalGroup(
-            FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtContrasenia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                    .addComponent(documento, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(contrasenia, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDocumento, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(15, 15, 15))
-        );
-        FormPanelLayout.setVerticalGroup(
-            FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(documento)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contrasenia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
+        jLabel10.setText("LifeMates,");
 
         btnLogIn.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
         btnLogIn.setForeground(new java.awt.Color(12, 202, 74));
         btnLogIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/login.png"))); // NOI18N
-        btnLogIn.setText("Log-In");
+        btnLogIn.setText("Ingresar");
         btnLogIn.setMaximumSize(new java.awt.Dimension(120, 40));
         btnLogIn.setMinimumSize(new java.awt.Dimension(120, 40));
         btnLogIn.setPreferredSize(new java.awt.Dimension(120, 40));
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogInActionPerformed(evt);
-            }
-        });
-
-        btnClean.setFont(new java.awt.Font("Chonburi", 0, 12)); // NOI18N
-        btnClean.setForeground(new java.awt.Color(12, 202, 74));
-        btnClean.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/eraser.png"))); // NOI18N
-        btnClean.setText("Limpiar");
-        btnClean.setMaximumSize(new java.awt.Dimension(120, 40));
-        btnClean.setMinimumSize(new java.awt.Dimension(120, 40));
-        btnClean.setPreferredSize(new java.awt.Dimension(120, 40));
-        btnClean.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCleanActionPerformed(evt);
             }
         });
 
@@ -184,32 +120,13 @@ public class WelcomePage extends javax.swing.JFrame {
         btnSolicitarCuenta.setForeground(new java.awt.Color(12, 202, 74));
         btnSolicitarCuenta.setText("Solicitar una cuenta");
 
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otherImages/latidos.png"))); // NOI18N
+
         javax.swing.GroupLayout LeftPanelLayout = new javax.swing.GroupLayout(LeftPanel);
         LeftPanel.setLayout(LeftPanelLayout);
         LeftPanelLayout.setHorizontalGroup(
             LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftPanelLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(LeftPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9))
-                    .addGroup(LeftPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
-                    .addGroup(LeftPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(LeftPanelLayout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(btnClean, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(LeftPanelLayout.createSequentialGroup()
                 .addContainerGap(46, Short.MAX_VALUE)
                 .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,15 +134,35 @@ public class WelcomePage extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSolicitarCuenta))
-                    .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(LeftPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(croptedIcon)
-                        .addGap(26, 26, 26)
+                    .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Title)
-                            .addComponent(amor, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                            .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                    .addGroup(LeftPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel9))
+                                    .addGroup(LeftPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel7))
+                                    .addGroup(LeftPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel10))))
+                            .addGroup(LeftPanelLayout.createSequentialGroup()
+                                .addGap(125, 125, 125)
+                                .addComponent(btnLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(LeftPanelLayout.createSequentialGroup()
+                            .addGap(31, 31, 31)
+                            .addComponent(croptedIcon)
+                            .addGap(26, 26, 26)
+                            .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Title)
+                                .addComponent(amor, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         LeftPanelLayout.setVerticalGroup(
             LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,7 +174,7 @@ public class WelcomePage extends javax.swing.JFrame {
                         .addComponent(Title)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(amor)))
-                .addGap(44, 44, 44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel10))
@@ -249,13 +186,11 @@ public class WelcomePage extends javax.swing.JFrame {
                 .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel7))
-                .addGap(38, 38, 38)
-                .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClean, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
+                .addComponent(btnLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel17)
+                .addGap(114, 114, 114)
                 .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(btnSolicitarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -363,11 +298,6 @@ public class WelcomePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
-        txtDocumento.setText("");
-        txtContrasenia.setText("");
-    }//GEN-LAST:event_btnCleanActionPerformed
-
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
         HomePage home = new HomePage();
         home.setVisible(true);
@@ -377,19 +307,15 @@ public class WelcomePage extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel FormPanel;
     private javax.swing.JPanel LeftPanel;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel RightPanel;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel Title1;
     private javax.swing.JLabel amor;
-    private javax.swing.JButton btnClean;
     private javax.swing.JButton btnLogIn;
     private javax.swing.JButton btnSolicitarCuenta;
-    private javax.swing.JLabel contrasenia;
     private javax.swing.JLabel croptedIcon;
-    private javax.swing.JLabel documento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -397,6 +323,7 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -405,7 +332,5 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField txtContrasenia;
-    private javax.swing.JTextField txtDocumento;
     // End of variables declaration//GEN-END:variables
 }
