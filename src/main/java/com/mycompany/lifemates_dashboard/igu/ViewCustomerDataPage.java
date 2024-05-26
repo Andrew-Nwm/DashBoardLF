@@ -528,6 +528,7 @@ public class ViewCustomerDataPage extends javax.swing.JFrame {
             if (tablaMascotas.getSelectedRow() != -1) {
                 int num_cliente = Integer.parseInt(String.valueOf(tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(), 0)));
                 control.borrarMascota(num_cliente);
+                control.borrarDuenio(num_cliente);
 
                 mostrarMensaje("Mascota Eliminada", "Info", "Borrado de Mascota");
                 cargarTabla();

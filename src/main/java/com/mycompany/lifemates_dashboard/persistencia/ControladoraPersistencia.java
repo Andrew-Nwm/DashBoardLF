@@ -60,4 +60,12 @@ public class ControladoraPersistencia {
         }
     }
 
+    public void borrarDuenio(int num_cliente) {
+        try {
+            duenioJpa.destroy(num_cliente);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
